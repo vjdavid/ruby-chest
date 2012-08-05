@@ -2,7 +2,6 @@ class ItemsController < ApplicationController
 require 'axlsx'
   
   def genxlsx
-#  @items = Item.all
 
   p = Axlsx::Package.new
   wp = p.workbook
@@ -13,12 +12,7 @@ require 'axlsx'
       sheet.add_row [item.serial, item.site.name, item.location.name, item.stockable, item.itype.name]
     end
   end
-  #Large file support using XSendFile via Apache: http://www.therailsway.com/2009/2/22/file-downloads-done-right/
-  #mime list: http://reference.sitepoint.com/html/mime-types-full
      p.serialize("inventory.xlsx")
-     #s = p.to_stream()
-     #file = File.open('inventory.xlsx','w'){|f| f.write(s.read)}
-     #send_file file, :type=> 'text/plain', :x_sendfile=>true
      send_file './inventory.xlsx', :type=> 'text/plain', :x_sendfile=>true
   end
   

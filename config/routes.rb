@@ -1,4 +1,6 @@
 Assetmanagement::Application.routes.draw do
+  resources :options
+
   resources :itypes
 
   resources :locations

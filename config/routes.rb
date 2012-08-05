@@ -1,4 +1,7 @@
 Assetmanagement::Application.routes.draw do
+
+ match 'genxlsx' => 'items#genxlsx'
+
   resources :itypes
 
   resources :locations
@@ -6,6 +9,8 @@ Assetmanagement::Application.routes.draw do
   resources :sites
 
   resources :items
+
+
 
   root :to =>  "home#index"
 

@@ -1,4 +1,14 @@
 class ItemsController < ApplicationController
+#require 'axlsx'
+  
+  def genxlsx
+
+   @items = Item.all
+  #Large file support using XSendFile via Apache: http://www.therailsway.com/2009/2/22/file-downloads-done-right/
+  #mime list: http://reference.sitepoint.com/html/mime-types-full
+     send_file './README.md', :type=> 'text/plain', :x_sendfile=>true
+  end
+  
   # GET /items
   # GET /items.json
   def index

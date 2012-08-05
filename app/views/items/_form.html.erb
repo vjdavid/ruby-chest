@@ -17,18 +17,18 @@
   </div>
   <div class="field">
     <%= f.label :site_id %><br />
-<%= collection_select(:item, :site_id, Site.all, :id, :name) %>
+<%= collection_select(:item, :site_id, Site.all, :id, :name, :prompt => true) %>
 <%= link_to 'New Site', new_site_path %>
   </div>
   <div class="field">
     <%= f.label :location_id %><br />
 
-<%= collection_select(:item, :location_id, Location.all, :id, :name) %>
+<%= collection_select(:item, :location_id, Location.all, :id, :name, :prompt => true) %>
 <%= link_to 'New Location', new_location_path %>
 </div>
   <div class="field">
     <%= f.label :itype_id %><br />
-<%= collection_select(:item, :itype_id, Itype.all, :id, :name) %>
+<%= collection_select(:item, :itype_id, Itype.all, :id, :name, :prompt => true) %>
 <%= link_to 'Item Type', new_itype_path %>
   </div>
   <div class="field">

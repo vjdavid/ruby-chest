@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120804215822) do
+ActiveRecord::Schema.define(:version => 20120803031032) do
 
   create_table "items", :force => true do |t|
     t.string   "serial"
@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(:version => 20120804215822) do
     t.datetime "updated_at",  :null => false
   end
 
-  add_index "items", ["itype_id"], :name => "index_items_on_itype_id_id"
-  add_index "items", ["location_id"], :name => "index_items_on_location_id_id"
-  add_index "items", ["site_id"], :name => "index_items_on_site_id_id"
+  add_index "items", ["itype_id"], :name => "index_items_on_itype_id"
+  add_index "items", ["location_id"], :name => "index_items_on_location_id"
+  add_index "items", ["site_id"], :name => "index_items_on_site_id"
 
   create_table "itypes", :force => true do |t|
     t.string   "name"

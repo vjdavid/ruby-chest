@@ -1,7 +1,9 @@
 Assetmanagement::Application.routes.draw do
 
- match 'genxlsx' => 'items#genxlsx'
+  resources :options
 
+  match 'genxlsx' => 'items#genxlsx'
+  match 'genranddata' => 'options#genranddata'
   resources :itypes
 
   resources :locations

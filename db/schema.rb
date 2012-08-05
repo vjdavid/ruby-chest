@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120803031032) do
+ActiveRecord::Schema.define(:version => 20120805154214) do
 
   create_table "items", :force => true do |t|
     t.string   "serial"
@@ -35,6 +35,12 @@ ActiveRecord::Schema.define(:version => 20120803031032) do
 
   create_table "locations", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "options", :force => true do |t|
+    t.string   "assettag"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
